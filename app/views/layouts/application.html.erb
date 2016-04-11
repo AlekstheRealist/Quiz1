@@ -8,16 +8,19 @@
 </head>
 <body>
   <header>
-    <div>
+    <div class="col-xs-3">
       Mad Pibs
     </div>
-    <div>
+    <div class="col-xs-6">
       Blurting Out Funny Stories Ever Since 2016
     </div>
-    <div>
-      Play
+    <div class="col-xs-3">
+      <%= link_to 'Play', '#' %>
     </div>
   </header>
+
+  <br class="clear" />
+
 <%= yield %>
 
 </body>
