@@ -1,0 +1,12 @@
+<h1>Enter Your Words Here<h1>
+<%= simple_form_for @words do |f| %>
+  <%= f.input :adjective1 %>
+  <%= f.input :noun1 %>
+  <%= f.input :pnoun %>
+  <%= f.input :person %>
+  <%= f.input :adjective2 %>
+  <%= f.input :clothing %>
+  <%= f.input :noun2 %>
+  <%= f.input :city %>
+  <%= f.submit 'Create', class: 'btn btn-danger' %>
+<% end %> 

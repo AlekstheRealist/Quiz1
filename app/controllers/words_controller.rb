@@ -1,5 +1,9 @@
 class WordsController < ApplicationController
   def index
-    @words = Words.first
+    @words = Word.order("RANDOM()").first
+  end
+
+  def new
+    @words = Word.new
   end
 end
