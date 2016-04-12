@@ -9,20 +9,22 @@
 <body>
   <header>
     <div class="col-xs-3">
-      <div class="circle">
-        <br />
-        Mad Pibs
-        <br />
-        Is
-        <br />
-        Awesome!
-      </div>
+      <%= link_to root_path, class: 'logo' do %>
+        <div class="circle">
+          <br />
+          Mad Pibs
+          <br />          
+          Is
+          <br />
+          Awesome!
+        </div>
+      <% end %>
     </div>
     <div class="col-xs-6 slogan">
       Blurting Out Funny Stories Ever Since 2016
     </div>
     <div class="col-xs-3 links">
-      <%= link_to 'Play', '#' %>
+      <%= link_to 'Play', new_word_path %>
     </div>
   </header>
   <hr />
