@@ -3,10 +3,6 @@ class WordsController < ApplicationController
     @words = Word.all
   end
 
-  def new
-    @words = Word.new
-  end
-
   def create
     @words = Word.create(quote_params)
     if @words.invalid?

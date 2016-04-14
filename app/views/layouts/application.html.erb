@@ -24,9 +24,40 @@
       Blurting Out Funny Stories Ever Since 2016
     </div>
     <div class="col-xs-3 links">
-      <%= link_to 'Play', new_word_path %>
+      <!-- Button trigger modal -->
+      <%= link_to 'Play', '#', data: {toggle: 'modal', target: '#myModal'} %>
     </div>
   </header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Contribute Your Words</h4>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for Word.new do |f| %>
+            <%= f.input :adjective1 %>
+            <%= f.input :noun1 %>
+            <%= f.input :pnoun %>
+            <%= f.input :person %>
+            <%= f.input :adjective2 %>
+            <%= f.input :clothing %>
+            <%= f.input :noun2 %>
+            <%= f.input :city %>
+            <br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit 'Create', class: 'btn btn-danger' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <hr />
   <br class="clear" />
 
