@@ -39,14 +39,21 @@
         </div>
         <div class="modal-body">
           <%= simple_form_for Word.new do |f| %>
-            <%= f.input :adjective1 %>
-            <%= f.input :noun1 %>
-            <%= f.input :pnoun %>
-            <%= f.input :person %>
-            <%= f.input :adjective2 %>
-            <%= f.input :clothing %>
-            <%= f.input :noun2 %>
-            <%= f.input :city %>
+            <%= f.input :adjective1, label: "What Adjective would you like to add?", placeholder: "Snarky" %>
+            <br />
+            <%= f.input :noun1, label: "What Noun would you like to add?", placeholder: "Lumberjack" %>
+            <br />
+            <%= f.input :pnoun, label: "What Plural Noun would you like to add?", placeholder: "Cute puppies" %>
+            <br />
+            <%= f.input :person, label: "What Person would you like to add?", placeholder: "Zach Galifianakis" %>
+            <br />
+            <%= f.input :adjective2, label: "What Adjective would you like to add?", placeholder: "Moody" %>
+            <br />
+            <%= f.input :clothing, label: "What article of clothing would you like to add?", placeholder: "Checkered socks" %>
+            <br />
+            <%= f.input :noun2, label: "What Noun would you like to add?", placeholder: "Deathstar" %>
+            <br />
+            <%= f.input :city, label: "What City would you like to add?", placeholder: "Tokyo" %>
             <br />
         </div>
         <div class="modal-footer">
