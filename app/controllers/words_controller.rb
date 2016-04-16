@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
   def index
     @words = Word.all
-    #@adjective1 = Word.last.adjective1
+    @adjective1 = Word.last.adjective1
     @noun1 = Word.last.noun1
     @pnoun = Word.last.pnoun
     @person = Word.last.person
