@@ -1,6 +1,14 @@
 class WordsController < ApplicationController
   def index
     @words = Word.all
+    @adjective1 = Word.last.adjective1
+    @noun1 = Word.last.noun1
+    @pnoun = Word.last.pnoun
+    @person = Word.last.person
+    @adjective2 = Word.last.adjective2
+    @clothing = Word.last.clothing
+    @noun2 = Word.last.noun2
+    @city = Word.last.city
   end
 
   def create
@@ -10,6 +18,12 @@ class WordsController < ApplicationController
     end
     redirect_to root_path 
   end
+
+  def new
+  end
+
+  #def show
+  #end
 
   private
 
